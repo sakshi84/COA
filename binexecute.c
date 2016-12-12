@@ -69,7 +69,7 @@ void two(char a[]){
 }
 	else if(a[20]=='1' && a[21]=='0')
 	cmp(r1,r2);	
-		else if(a[20]=='1' && a[21]=='1')
+	else if(a[20]=='1' && a[21]=='1')
 	cmpi(r1,r2);
 
 	
@@ -226,12 +226,12 @@ int i,length;
 	int zero=0;
 	char string1[40];
 	 
-     	fin = fopen("in.txt","r");
-     	fout = fopen("out.txt","w");  
+     	fin = fopen("binary.txt","r");
+     	fout = fopen("register.txt","w");  
   
   	while ( fgets( string1, 80, fin ) != NULL ){// input from file
     	zero=0;
-    	print(fout);
+    	//print(fout);
         	length = strlen(string1);
     	for(i=0;i<length;i++){
         	if(string1[i]=='0')
@@ -241,18 +241,26 @@ int i,length;
            	}
     	//printf("%d %d ",zero,i);
     	
-    	if(zero==14)
+    	if(zero==14){
     	three(string1);
-    	else if(zero==19)
+    	print(fout);
+    	}
+    	else if(zero==19){
     	two(string1);
-    	else if(zero==23)
+    	print(fout);
+   		}
+    	else if(zero==23){
     	one(string1);
-    	else if(zero==0)
+    	print(fout);
+   		}
+    	else if(zero==0){
     	halt();
+    	print(fout);
+   		}
     	else
     	{
     	
-    	exit(0);
+    	continue;
    }
    	 
     	}

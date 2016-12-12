@@ -1,0 +1,10 @@
+CMPI #5,R03
+JNE $label2
+ADD1 R06,R08,R05
+SUB1 R05,R04,R03
+JMP $label2
+label1
+HLT
+label2
+MUL1 R01,R00,R02
+JMP $label1
