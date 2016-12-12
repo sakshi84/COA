@@ -1,8 +1,0 @@
-ADD1 #60,R02
-label1
-SUB1 #2,R04
-JMP $label2
-HLT
-label2
-MUL1 R01,R00
-ADD1 $label2
